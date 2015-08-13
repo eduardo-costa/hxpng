@@ -29,6 +29,30 @@ class PngFormat
 extern class Png
 {
 	/**
+	 * Encodes a RGBA buffer into a Png file byte array.
+	 * @param	p_buffer
+	 * @return
+	 */
+	static inline public function encode(p_width:Int,p_height:Int,p_alpha:Bool,p_buffer:Uint8Array):Uint8Array
+	{
+		var img : Png = Png.create(p_width, p_height, PngFormat.RGB, p_alpha);
+		var b : Uint8Array = p_buffer;
+		var w : Int = p_width;
+		var h : Int = p_height;
+		var cc : Int = p_alpha ? 4 : 3;
+		for (i in 0...w)
+		for (j in 0...h)
+		{
+			var ir : Int = ((i * w) + j) * cc;
+			var ig : Int = ir + 1;
+			var ib : Int = ir + 2;
+			var ia : Int = ir + 3;
+			img.setRGBA(j, i, b[ir], b[ig], b[ib], b[ia]);
+		}
+		return img.buffer;
+	}
+	
+	/**
 	 * Creates a new Png file.
 	 * @param	p_width
 	 * @param	p_height

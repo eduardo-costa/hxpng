@@ -5,12 +5,9 @@ HaxeTest.main = function() {
 	window.onload = function(p_event) {
 		var img;
 		var p_format = js_png_PngFormat.RGB;
-		var w;
-		w = 32;
-		var h;
-		h = 32;
-		var a;
-		a = true;
+		var w = 32;
+		var h = 32;
+		var a = true;
 		if(p_format == js_png_PngFormat.Grayscale) {
 			img = new PngGreyscale(w, h, a);
 		} else if(p_format == js_png_PngFormat.Indexed) {
