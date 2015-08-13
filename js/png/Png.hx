@@ -40,8 +40,8 @@ extern class Png
 		var w : Int = p_width;
 		var h : Int = p_height;
 		var cc : Int = p_alpha ? 4 : 3;
-		for (i in 0...w)
-		for (j in 0...h)
+		for (i in 0...h)
+		for (j in 0...w)
 		{
 			var ir : Int = ((i * w) + j) * cc;
 			var ig : Int = ir + 1;
