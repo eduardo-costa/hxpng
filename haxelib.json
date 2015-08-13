@@ -1,0 +1,14 @@
+{
+  "name": "hxpng",
+  "url": "https://github.com/eduardo-costa/hxpng",
+  "license": "MIT",
+  "tags": ["png","image","format","dom","render"],
+  "description": "Png Encoder Tool Form Haxe",
+  "version": "0.1.0",
+  "releasenotes": "0.1.0",
+  "contributors": ["eduardo-costa"],
+  "dependencies": 
+  {
+	  
+  }
+}
